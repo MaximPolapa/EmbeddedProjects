@@ -1,0 +1,46 @@
+{
+   "terminal.integrated.defaultProfile.windows": "Command Prompt",  // "PowerShell"
+
+    "files.associations": {
+        "delay.h": "c",
+        "io.h": "c"
+    },
+    "actionButtons": {
+        "defaultColor": "#FFFFFF",  // Can also use string color names.
+        "loadNpmCommands":false,    // Disables automatic generation of actions for npm commands.
+        "reloadButton":"↻",        // Custom reload button text or icon (default ↻). null value enables automatic reload on configuration change
+        "commands": [
+            {
+                "cwd": "${workspaceFolder}", 	// Terminal initial folder ${workspaceFolder} and os user home as defaults
+                "name": "♻️ Build Projekt",
+                "color": "yellow",
+                "singleInstance": true,
+                //"type": "shell",
+                "command": "C://tools//avr_gcc/bin//make.exe",
+            },
+            {
+                "cwd": "${workspaceFolder}",
+                "singleInstance": true,
+                "name": "🔼 Flash hex",
+                "color": "white",
+                //"type": "shell",
+                "command": "C://tools//avr_gcc/bin//make.exe flash",
+            },
+            {
+                "name": "$(debug-console) Serial console",
+                "cwd": "${workspaceFolder}",
+                "color": "magenta",
+                "singleInstance": true,
+                //"type": "shell",
+                "command": "C://tools//avr_gcc/bin//make.exe serial",
+		    },
+            {
+                "name": "$(tasks-remove) close terminals",
+                "color": "red",
+                "useVsCodeApi": true,
+                "command": "workbench.action.terminal.killAll"
+		    }
+        ]
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

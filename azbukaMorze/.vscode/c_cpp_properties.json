@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "vscode_avr_c_properties",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\tools\\avr_gcc\\avr\\include"
+            ],
+            "defines": [
+                "__AVR_ATmega168P__",
+                "F_CPU=16000000"
+            ],
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "\"C:\\tools\\avr_gcc\\bin\\avr-gcc.exe\""
+        }
+    ],
+    "version": 4
+}
